@@ -27,8 +27,12 @@ public class Calculations {
     public static int faculty(int n){
         assert n >=0;
         int faculty = 1;
-        for(int i=2;i<=n;i++){
-            faculty *= i;
+//        for(int i=2;i<=n;i++){
+//            faculty *= i;
+//        }
+        int i=1
+        while(i<n){
+
         }
         return faculty;
     }
