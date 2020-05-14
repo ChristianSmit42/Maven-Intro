@@ -90,7 +90,7 @@ class CalculationsTest {
         int fakultat = 40320;
 
         // WHEN
-        int resultat = Calculations.faculty(8);
+        int resultat = Calculations.fclty(8);
 
         // THEN
         assertEquals(fakultat, resultat);
@@ -103,7 +103,7 @@ class CalculationsTest {
         int fakultat = 1;
 
         // WHEN
-        int resultat = Calculations.faculty(0);
+        int resultat = Calculations.fclty(0);
 
         // THEN
         assertEquals(fakultat, resultat);
@@ -116,7 +116,7 @@ class CalculationsTest {
         int fakultat = 1;
 
         // WHEN
-        int resultat = Calculations.faculty(1);
+        int resultat = Calculations.fclty(1);
 
         // THEN
         assertEquals(fakultat, resultat);
