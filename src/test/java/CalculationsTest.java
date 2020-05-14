@@ -82,4 +82,43 @@ class CalculationsTest {
         // THEN
         assertEquals(60,result);
     }
+
+    @Test
+    @DisplayName("Die Fakultät von 8 sollte 40320 sein METHODE: countByAlert()")
+    public void fakultatVon8Soll40320Sein(){
+        // GIVEN
+        int fakultat = 40320;
+
+        // WHEN
+        int resultat = Calculations.faculty(8);
+
+        // THEN
+        assertEquals(fakultat, resultat);
+    }
+
+    @Test
+    @DisplayName("Die Fakultät von 0 sollte 1 sein METHODE: countByAlert()")
+    public void fakultatVon0Soll1Sein(){
+        // GIVEN
+        int fakultat = 1;
+
+        // WHEN
+        int resultat = Calculations.faculty(0);
+
+        // THEN
+        assertEquals(fakultat, resultat);
+    }
+
+    @Test
+    @DisplayName("Die Fakultät von 1 sollte 1 sein METHODE: countByAlert()")
+    public void fakultatVon1Soll1Sein(){
+        // GIVEN
+        int fakultat = 1;
+
+        // WHEN
+        int resultat = Calculations.faculty(1);
+
+        // THEN
+        assertEquals(fakultat, resultat);
+    }
 }
