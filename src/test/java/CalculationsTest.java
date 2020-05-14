@@ -19,7 +19,7 @@ class CalculationsTest {
     }
 
     @Test
-    @DisplayName("Bei 30 Personen sollte Ergebnis sein: OK")
+    @DisplayName("Bei 30 Personen sollte Ergebnis sein: OK METHODE: coronaCount()")
     public void coronaShouldntSpreadwith30Ppl(){
         // Given
         int a = 30;
@@ -32,7 +32,7 @@ class CalculationsTest {
     }
 
     @Test
-    @DisplayName("Bei 32 Personen sollte Ergebnis sein: LIMIT ÜBERSCHRITTEN! ")
+    @DisplayName("Bei 32 Personen sollte Ergebnis sein: LIMIT ÜBERSCHRITTEN! METHODE: coronaCount()")
     public void coronaMightSpreadwith32Ppl(){
         // Given
         int a = 32;
@@ -42,5 +42,44 @@ class CalculationsTest {
 
         // THEN
         assertEquals("LIMIT ÜBERSCHRITTEN!", result);
+    }
+
+    @Test
+    @DisplayName("Bei Alarmstufe Rot sollten keine Personen erlaubt sein METHODE: countByAlert()")
+    public void personen0BeiAlarmRot(){
+        // GIVEN
+        String a = "rot";
+
+        // WHEN
+        int result = Calculations.countByAlert(a);
+
+        // THEN
+        assertEquals(0,result);
+    }
+
+    @Test
+    @DisplayName("Bei Alarmstufe Gelb sollten 30 Personen erlaubt sein METHODE: countByAlert()")
+    public void personen30BeiAlarmGelb(){
+        // GIVEN
+        String a = "gelb";
+
+        // WHEN
+        int result = Calculations.countByAlert(a);
+
+        // THEN
+        assertEquals(30,result);
+    }
+
+    @Test
+    @DisplayName("Bei Alarmstufe Grün sollten 60 Personen erlaubt sein METHODE: countByAlert()")
+    public void personen60BeiAlarmGruen(){
+        // GIVEN
+        String a = "gruen";
+
+        // WHEN
+        int result = Calculations.countByAlert(a);
+
+        // THEN
+        assertEquals(60,result);
     }
 }
