@@ -1,18 +1,18 @@
 public class Calculations {
 
-    public static int add(int a,int b){
-        return a+b;
+    public static int add(int a, int b) {
+        return a + b;
     }
 
-    public static String coronaCount(int a){
-        if(a<=30){
+    public static String coronaCount(int a) {
+        if (a <= 30) {
             return "OK";
         }
         return "LIMIT ÜBERSCHRITTEN!";
     }
 
-    public static int countByAlert(String a){
-        switch (a){
+    public static int countByAlert(String a) {
+        switch (a) {
             case "gruen":
                 return 60;
             case "gelb":
@@ -24,16 +24,34 @@ public class Calculations {
         }
     }
 
-    public static int faculty(int n){
-        assert n >=0;
+    public static int fclty(int n) {
+        assert n >= 0;
         int faculty = 1;
-//        for(int i=2;i<=n;i++){
-//            faculty *= i;
-//        }
-        int i=1
-        while(i<n){
 
+//          Lösung mit FOR
+
+       /* for(int i=2;i<=n;i++){
+            faculty *= i;
         }
-        return faculty;
+        return faculty;*/
+
+//          Lösung mit WHILE
+
+        /*int i = 1;
+        while (i <= n) {
+            faculty *= n;
+            n--;
+        }
+        return faculty;*/
+
+
+//        Lösung mit REKURSION
+
+        if(n<=1){
+            return faculty;
+        } else {
+            return fclty(n-1)*n;
+        }
+
     }
 }
