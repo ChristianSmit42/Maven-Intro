@@ -10,4 +10,17 @@ public class Calculations {
         }
         return "LIMIT ÜBERSCHRITTEN!";
     }
+
+    public static int countByAlert(String a){
+        switch (a){
+            case "gruen":
+                return 60;
+            case "gelb":
+                return 30;
+            case "rot":
+                return 0;
+            default:
+                return 0;
+        }
+    }
 }
