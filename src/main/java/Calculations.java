@@ -23,4 +23,13 @@ public class Calculations {
                 return 0;
         }
     }
+
+    public static int faculty(int n){
+        assert n >=0;
+        int faculty = 1;
+        for(int i=2;i<=n;i++){
+            faculty *= i;
+        }
+        return faculty;
+    }
 }
