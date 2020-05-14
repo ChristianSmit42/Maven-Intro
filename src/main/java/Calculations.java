@@ -30,7 +30,7 @@ public class Calculations {
 //        for(int i=2;i<=n;i++){
 //            faculty *= i;
 //        }
-        int i=1
+        int i=1;
         while(i<n){
 
         }
