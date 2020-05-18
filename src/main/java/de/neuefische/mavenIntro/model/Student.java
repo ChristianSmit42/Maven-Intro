@@ -1,10 +1,12 @@
-public class Students {
+package de.neuefische.mavenIntro.model;
+
+public class Student {
 
     private String studienrichtung = "";
     private int semester = 0;
     private String name = "";
 
-    public Students(String name, String studienrichtung, int semester){
+    public Student(String name, String studienrichtung, int semester) {
         this.name = name;
         this.studienrichtung = studienrichtung;
         this.semester = semester;
@@ -36,6 +38,10 @@ public class Students {
 
     public void printStudent() {
         System.out.println(this.name + " studies " + this.studienrichtung + " in " + this.semester + ". semester");
+    }
+
+    public String createStudentInfo(){
+        return this.name + " studies " + this.studienrichtung + " in " + this.semester + ". semester";
     }
 
 

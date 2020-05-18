@@ -1,3 +1,5 @@
+package de.neuefische.mavenIntro.utils;
+
 public class Calculations {
 
     public static int add(int a, int b) {
