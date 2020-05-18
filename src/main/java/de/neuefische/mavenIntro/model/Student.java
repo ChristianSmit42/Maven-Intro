@@ -1,7 +1,25 @@
 package de.neuefische.mavenIntro.model;
 
+import java.util.Objects;
+
 public class Student {
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return studentId == student.studentId;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(studentId);
+    }
+
+    private static int studentIds;
+
+    private int studentId;
     private String studienrichtung = "";
     private int semester = 0;
     private String name = "";
@@ -10,6 +28,11 @@ public class Student {
         this.name = name;
         this.studienrichtung = studienrichtung;
         this.semester = semester;
+        this.studentId = this.studentIds += 1;
+    }
+
+    public int getStudentId() {
+        return studentId;
     }
 
     public String getStudienrichtung() {
@@ -36,12 +59,8 @@ public class Student {
         this.name = name;
     }
 
-    public void printStudent() {
-        System.out.println(this.name + " studies " + this.studienrichtung + " in " + this.semester + ". semester");
-    }
-
-    public String createStudentInfo(){
-        return this.name + " studies " + this.studienrichtung + " in " + this.semester + ". semester";
+    public String createStudentInfo() {
+        return this.name + " id(" + studentId + ")" + " studies " + this.studienrichtung + " in " + this.semester + ". semester";
     }
 
 
