@@ -122,7 +122,8 @@ class CalculationsTest {
         assertEquals(fakultat, resultat);
     }
 
-    @Test@DisplayName("Anzahl von neuen Studenten sollte Array Länge 15 ausgeben")
+    @Test
+    @DisplayName("Anzahl von neuen Studenten sollte Array Länge 15 ausgeben")
     public void studentAmountEqualsInput(){
         Calculations calc = new Calculations();
         // GIVEN
@@ -134,4 +135,6 @@ class CalculationsTest {
         // THEN
         assertEquals(15,resultat);
     }
+
+
 }
