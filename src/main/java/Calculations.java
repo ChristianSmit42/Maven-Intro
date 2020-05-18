@@ -47,11 +47,25 @@ public class Calculations {
 
 //        Lösung mit REKURSION
 
-        if(n<=1){
+        if (n <= 1) {
             return faculty;
         } else {
-            return fclty(n-1)*n;
+            return fclty(n - 1) * n;
         }
 
+    }
+
+    public String[] studentsCreation(int amount) {
+        String[] students = new String[amount];
+        for (int i = 0; i < amount; i++) {
+            students[i] = "Student Nr. " + (i + 1);
+        }
+        return students;
+    }
+    public void printStudents(int amount){
+        String[] stud = studentsCreation(amount);
+        for (String s : stud) {
+            System.out.println(s);
+        }
     }
 }
